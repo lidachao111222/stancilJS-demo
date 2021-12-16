@@ -23,9 +23,11 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "prepare": "npm run build"
   },
   "dependencies": {
+    "@awesome-elements/layout": "^0.1.11",
     "@stencil/core": "^2.11.0"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import '@awesome-elements/layout';
 
 @Component({
   tag: 'my-component',
@@ -22,11 +22,24 @@ export class MyComponent {
    */
   @Prop() last: string;
 
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
-  }
-
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return (
+      <awesome-wrap>
+        <h1>
+          This is a title
+        </h1>
+        <awesome-flex>
+          <awesome-flex-item>
+            1
+          </awesome-flex-item>
+          <awesome-flex-item>
+            2
+          </awesome-flex-item>
+          <awesome-flex-item>
+            3
+          </awesome-flex-item>
+        </awesome-flex>
+      </awesome-wrap>
+    );
   }
 }
